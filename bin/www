@@ -86,7 +86,7 @@ function onListening() {
 }
 
 const mongoose = require("mongoose");
-const connectionString = Process.env.MONGO_URI;
+const connectionString = process.env.MONGO_URI;
 mongoose
   .connect(connectionString, {
     useNewUrlParser: true,
