@@ -86,9 +86,7 @@ function onListening() {
 }
 
 const mongoose = require("mongoose");
-//I have no time to make env file thats way i use this uri directly.
-const connectionString =
-  "mongodb+srv://majid:zxcvbnm123@nodetuts.rdl9m.mongodb.net/FinalLab?retryWrites=true&w=majority";
+const connectionString = Process.env.MONGO_URI;
 mongoose
   .connect(connectionString, {
     useNewUrlParser: true,
